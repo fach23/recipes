@@ -1,2 +1,2 @@
 # recipes
-Recipes for cooking
+This is a simple C++ application to manage recipes for cooking.
