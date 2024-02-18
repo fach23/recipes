@@ -83,10 +83,9 @@ public:
     void display() const {
         std::cout << "Nutritional Information:\n"
                   << " - Calories: " << calories_.get_value() << " kcal\n"
-                  << " - Protein: " << protein_.get_value() << "g\n"
-                  << " - Carbohydrates: " << carbohydrates_.get_value() << "g\n"
-                  << " - Fat: " << fat_.get_value() << "g\n";
-
+                  << " - Protein: " << protein_.get_value() << " g\n"
+                  << " - Carbohydrates: " << carbohydrates_.get_value() << " g\n"
+                  << " - Fat: " << fat_.get_value() << " g\n";
     }
 
 private:

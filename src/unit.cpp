@@ -1,5 +1,75 @@
 #include "../include/unit.hpp"
 
+std::string to_string(WEIGHT_UNIT unit) {
+    switch (unit) {
+        case WEIGHT_UNIT::GRAM: {
+            return "g";
+        }
+        case WEIGHT_UNIT::KILOGRAM: {
+            return "kg";
+        }
+        default: {
+            return "-";
+        }
+    }
+}
+
+std::string to_string(VOLUME_UNIT unit) {
+    switch (unit) {
+        case VOLUME_UNIT::MILLILITER: {
+            return "ml";
+        }
+        case VOLUME_UNIT::LITER: {
+            return "l";
+        }
+        default: {
+            return "-";
+        }
+    }
+}
+
+std::string to_string(ENERGY_UNIT unit) {
+    switch (unit) {
+        case ENERGY_UNIT::KILOCALORIE: {
+            return "kcal";
+        }
+        case ENERGY_UNIT::KILOJOULE: {
+            return "kJ";
+        }
+        default: {
+            return "-";
+        }
+    }
+}
+
+std::string to_string(PIECE_UNIT unit) {
+    switch (unit) {
+        case PIECE_UNIT::PIECE: {
+            return "piece";
+        }
+        case PIECE_UNIT::DOZEN: {
+            return "dozen";
+        }
+        default: {
+            return "-";
+        }
+    }
+}
+
+std::string to_string(SPOON_UNIT unit) {
+    switch (unit) {
+        case SPOON_UNIT::TEA_SPOON: {
+            return "tea spoon";
+        }
+        case SPOON_UNIT::TABLE_SPOON: {
+            return "table spoon";
+        }
+        default: {
+            return "-";
+        }
+    }
+}
+
 Weight operator "" _g(long double value) {
     // Assume pounds for the literal without a suffix
     return Weight{static_cast<double>(value), WEIGHT_UNIT::GRAM};

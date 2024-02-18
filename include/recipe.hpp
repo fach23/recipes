@@ -11,23 +11,20 @@
 
 class BaseRecipe {
 public:
-    BaseRecipe(const std::string &name, const std::string &description, const std::vector<BaseIngredient> &ingredients,
-               const std::vector<Review> &reviews)
-            : name_(name),
-              description_(description),
+    BaseRecipe(std::string name, std::string description, const std::vector<BaseIngredient> &ingredients,
+               const std::vector<Review> &reviews = {},
+               const double portions = 1.0)
+            : name_(std::move(name)),
+              description_(std::move(description)),
               ingredients_(ingredients),
               review_manager_(reviews),
-              portions_(1.0) {}
+              portions_(portions) {}
 
-    BaseRecipe scale_quantity(double portions) const {
-        BaseRecipe scaled_recipe = *this; // Copy the current recipe
-
+    void scale_quantity(double portions) {
         // Scale the quantities of ingredients
-        for (auto &ingredient: scaled_recipe.ingredients_) {
+        for (auto &ingredient: ingredients_) {
             ingredient.scale_quantity(portions);
         }
-
-        return scaled_recipe;
     }
 
 
@@ -43,6 +40,7 @@ public:
         for (const auto &ingredient: ingredients_) {
             std::cout << " - ";
             ingredient.display();
+            std::cout << std::endl;
         }
         std::cout << "3) ";
         get_nutrition_information().display();
@@ -75,10 +73,10 @@ private:
 // RecipeBuilder class for building recipes
 class RecipeBuilder {
 public:
-    RecipeBuilder(const std::string &name) : name_(name) {}
+    RecipeBuilder(std::string name) : name_(std::move(name)) {}
 
-    RecipeBuilder &set_description(const std::string &description) {
-        description_ = description;
+    RecipeBuilder &set_description(std::string description) {
+        description_ = std::move(description);
         return *this;
     }
 
@@ -93,9 +91,7 @@ public:
     }
 
     BaseRecipe build() const {
-        BaseRecipe recipe(name_, description_, ingredients_, reviews_);
-
-        return recipe;
+        return {name_, description_, ingredients_, reviews_};
     }
 
 private:

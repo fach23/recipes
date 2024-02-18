@@ -16,8 +16,8 @@ enum class REVIEW_SCORE {
 
 class Review {
 public:
-    Review(REVIEW_SCORE review_score, const std::string &review_description)
-            : review_score_(review_score), review_description_(review_description) {}
+    Review(REVIEW_SCORE review_score, std::string review_description)
+            : review_score_(review_score), review_description_(std::move(review_description)) {}
 
     REVIEW_SCORE get_review_score() const { return review_score_; }
 

@@ -10,25 +10,35 @@ enum class WEIGHT_UNIT {
     KILOGRAM
 };
 
+std::string to_string(WEIGHT_UNIT unit);
+
 enum class VOLUME_UNIT {
     MILLILITER, // DEFAULT
     LITER
 };
+
+std::string to_string(VOLUME_UNIT unit);
 
 enum class ENERGY_UNIT {
     KILOCALORIE, // DEFAULT
     KILOJOULE
 };
 
+std::string to_string(ENERGY_UNIT unit);
+
 enum class PIECE_UNIT {
     PIECE, // DEFAULT
     DOZEN
 };
 
+std::string to_string(PIECE_UNIT unit);
+
 enum class SPOON_UNIT {
     TEA_SPOON, // DEFAULT
     TABLE_SPOON
 };
+
+std::string to_string(SPOON_UNIT unit);
 
 class PINCH_UNIT {
 
@@ -57,7 +67,7 @@ public:
     }
 
     void display() const override {
-        std::cout << value_ << std::endl;
+        std::cout << value_ << to_string(unit_);
     }
 
 private:
@@ -75,7 +85,7 @@ public:
     }
 
     void display() const override {
-        std::cout << value_ << std::endl;
+        std::cout << value_ << to_string(unit_);
     }
 
 private:
@@ -93,7 +103,7 @@ public:
     }
 
     void display() const override {
-        std::cout << value_ << std::endl;
+        std::cout << value_ << to_string(unit_);
     }
 
 private:
@@ -111,7 +121,7 @@ public:
     }
 
     void display() const override {
-        std::cout << value_ << std::endl;
+        std::cout << value_ << to_string(unit_);
     }
 
 private:
@@ -129,7 +139,7 @@ public:
     }
 
     void display() const override {
-        std::cout << value_ << std::endl;
+        std::cout << value_ << to_string(unit_);
     }
 
 private:
