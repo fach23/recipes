@@ -1,0 +1,6 @@
+{
+    "cmake.options.statusBarVisibility": "visible",
+    "cmake.buildBeforeRun": true,
+    "cmake.configureOnOpen": true,
+    "cmake.useCMakePresets": "always"
+}
