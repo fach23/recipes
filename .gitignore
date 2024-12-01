@@ -40,6 +40,8 @@
 **/CMakeScripts
 **/compile_commands.json
 
+# Build folder
+build/**
 
 ## Local 
 

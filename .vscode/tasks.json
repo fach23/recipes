@@ -7,7 +7,7 @@
             "command": "cmake",
             "args": [
                 "--build",
-                "${workspaceFolder}/build",
+                "${workspaceFolder}/build/debug",
                 "--preset",
                 "debug"
             ],
