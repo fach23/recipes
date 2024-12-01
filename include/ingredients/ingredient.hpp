@@ -1,12 +1,11 @@
-#ifndef RECIPES_INGREDIENT_H
-#define RECIPES_INGREDIENT_H
+#pragma once
 
 #include <iostream>
 #include <vector>
 #include <string>
 
-#include "nutritional_information.hpp"
-#include "unit.hpp"
+#include "../nutritional_information.hpp"
+#include "../unit.hpp"
 
 class BaseIngredient {
 public:
@@ -111,5 +110,3 @@ public:
                                                                        Fat{0.2}}) {
     }
 };
-
-#endif // RECIPES_INGREDIENT_H

@@ -1,10 +1,9 @@
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.31.0)
 project(recipes)
+
+include(CTest)
+enable_testing()
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(recipes main.cpp src/ingredient.cpp src/nutritional_information.cpp src/recipe.cpp
-        src/unit.cpp
-        include/unit.hpp
-        include/review.cpp
-        include/review.hpp)
+add_executable(recipes main.cpp src/ingredients/ingredient.cpp src/nutritional_information.cpp src/recipe_manager.cpp src/recipe.cpp src/review.cpp src/unit.cpp)

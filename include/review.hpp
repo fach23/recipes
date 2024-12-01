@@ -1,5 +1,4 @@
-#ifndef RECIPES_REVIEW_HPP
-#define RECIPES_REVIEW_HPP
+#pragma once
 
 #include <iostream>
 #include <vector>
@@ -16,31 +15,34 @@ enum class REVIEW_SCORE {
 
 class Review {
 public:
-    Review(REVIEW_SCORE review_score, std::string review_description)
-            : review_score_(review_score), review_description_(std::move(review_description)) {}
+    Review(REVIEW_SCORE review_score, std::string review_description = "", std::string review_author = "")
+            : review_score_(review_score), review_description_(std::move(review_description)),
+              review_author_(review_author) {}
 
     REVIEW_SCORE get_review_score() const { return review_score_; }
 
     std::string const &get_review_description() const { return review_description_; }
 
+    std::string const &get_review_author() const { return review_author_; }
+
 private:
     REVIEW_SCORE review_score_;
     std::string review_description_;
+    std::string review_author_;
 };
 
 class ReviewManager {
 public:
     ReviewManager() = default;
 
-    ReviewManager(const std::vector<Review> &reviews)
+    ReviewManager(const std::vector <Review> &reviews)
             : reviews_(reviews) {}
 
     void add_review(const Review &review) {
         reviews_.push_back(review);
-
     }
 
-    std::optional<REVIEW_SCORE> get_mean_review_score() const {
+    std::optional <REVIEW_SCORE> get_mean_review_score() const {
         if (reviews_.empty()) {
             return std::nullopt;
         } else {
@@ -53,8 +55,5 @@ public:
     }
 
 private:
-    std::vector<Review> reviews_;
+    std::vector <Review> reviews_;
 };
-
-
-#endif // RECIPES_REVIEW_HPP

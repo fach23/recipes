@@ -1,5 +1,4 @@
-#ifndef RECIPES_UNIT_HPP
-#define RECIPES_UNIT_HPP
+#pragma once
 
 #include <iostream>
 #include <string>
@@ -45,7 +44,6 @@ class PINCH_UNIT {
 };
 
 class BaseQuantity;
-
 using QuantityPtr = std::shared_ptr<BaseQuantity>;
 
 class BaseQuantity {
@@ -166,5 +164,3 @@ Spoons operator "" _tea_spoon(unsigned long long value);
 Spoons operator "" _table_spoon(unsigned long long value);
 
 unsigned long long operator "" _pinch(unsigned long long value);
-
-#endif // RECIPES_UNIT_HPP

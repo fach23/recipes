@@ -1,5 +1,4 @@
-#ifndef RECIPES_NUTRITIONAL_INFORMATION_H
-#define RECIPES_NUTRITIONAL_INFORMATION_H
+#pragma once
 
 #include <iostream>
 #include <vector>
@@ -28,7 +27,6 @@ protected:
 class Calories : public BaseNutrition {
 public:
     explicit Calories(double value) : BaseNutrition(value) {}
-
 };
 
 // Strong type for protein
@@ -89,11 +87,12 @@ public:
     }
 
 private:
+    /// @brief Calories
     Calories calories_;
+    /// @brief Protein
     Protein protein_;
+    /// @brief Carbohydrates
     Carbohydrates carbohydrates_;
+    /// @brief Fat
     Fat fat_;
 };
-
-
-#endif // RECIPES_NUTRITIONAL_INFORMATION_H
