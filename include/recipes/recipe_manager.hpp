@@ -3,8 +3,11 @@
 #include <vector>
 #include <algorithm>
 
-#include "recipe.hpp"
+#include "recipes/base_recipe.hpp"
 
+/**
+ * @brief Manager for recipes
+ */
 class RecipeManager {
 public:
     RecipeManager() = default;
@@ -24,7 +27,7 @@ public:
         }
     }
 
-    void sort_recipies_alphabetically() {
+    void sort_recipes_alphabetically() {
         std::sort(recipes_.begin(), recipes_.end(),
                   [](const BaseRecipe &lhs, const BaseRecipe &rhs) {
                       return lhs.get_name() < rhs.get_name();
@@ -38,7 +41,7 @@ public:
     }
 
 private:
-    /// @brief Recipies
+    /// @brief recipes
     std::vector<BaseRecipe> recipes_;
 };
 
