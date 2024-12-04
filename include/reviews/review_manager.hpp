@@ -2,26 +2,35 @@
 
 #include "reviews/review.hpp"
 
+/**
+ * @brief Review manager‚
+ */
 class ReviewManager {
   public:
+    /**
+     * @brief Constructor
+     */
     ReviewManager() = default;
 
-    ReviewManager(const std::vector<Review> &reviews) : reviews_(reviews) {}
+    /**
+     * @brief Constructor
+     * @param reviews Reviews to be added
+     */
+    ReviewManager(const std::vector<Review> &reviews);
 
-    void add_review(const Review &review) { reviews_.push_back(review); }
+    /**
+     * @brief Adds review
+     * @param review Review to be added
+     */
+    void add_review(const Review &review);
 
-    std::optional<REVIEW_SCORE> get_mean_review_score() const {
-        if (reviews_.empty()) {
-            return std::nullopt;
-        } else {
-            double accumulated_review_score{0.0};
-            for (const auto &review : reviews_) {
-                accumulated_review_score += static_cast<double>(review.get_review_score());
-            }
-            return static_cast<REVIEW_SCORE>(accumulated_review_score / reviews_.size());
-        }
-    }
+    /**
+     * @brief Returns mean review score
+     * @return Mean review score
+     */
+    std::optional<REVIEW_SCORE> get_mean_review_score() const;
 
   private:
+    /// @brief Reviews
     std::vector<Review> reviews_;
 };

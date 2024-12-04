@@ -12,7 +12,7 @@ class BaseNutrition {
 
     /**
      * @brief Get value
-     * @return double Value
+     * @return Value
      * */
     double get_value() const { return value_; }
 

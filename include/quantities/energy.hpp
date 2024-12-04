@@ -28,18 +28,18 @@ class Energy : public IQuantity {
      * @param value Value
      * @param unit Unit
      */
-    Energy(double value, ENERGY_UNIT unit) : value_(value), unit_(unit) {}
+    Energy(double value, ENERGY_UNIT unit);
 
     /**
      * @brief Scales quantity
      * @param portions Portions
      */
-    void scale_quantity(double portions) override { value_ *= portions; }
+    void scale_quantity(double portions) override;
 
     /**
      * @brief Displays quantity
      */
-    void display() const override { std::cout << value_ << to_string(unit_); }
+    void display() const override;
 
   private:
     /// @brief Value

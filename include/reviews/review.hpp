@@ -4,6 +4,9 @@
 #include <optional>
 #include <vector>
 
+/**
+ * @brief Review score
+ */
 enum class REVIEW_SCORE {
     NO_STAR = 0,
     ONE_STAR = 1,
@@ -13,18 +16,37 @@ enum class REVIEW_SCORE {
     FIVE_STARS = 5
 };
 
+/**
+ * @brief Review
+ */
 class Review {
   public:
+    /**
+     * @brief Constructor
+     * @param review_score Review score
+     * @param review_description Review description
+     * @param review_author Review author
+     */
     Review(REVIEW_SCORE review_score, std::string review_description = "",
-           std::string review_author = "")
-        : review_score_(review_score), review_description_(std::move(review_description)),
-          review_author_(review_author) {}
+           std::string review_author = "");
 
-    REVIEW_SCORE get_review_score() const { return review_score_; }
+    /**
+     * @brief Return review score
+     * @return Review score‚
+     */
+    REVIEW_SCORE get_review_score() const;
 
-    std::string const &get_review_description() const { return review_description_; }
+    /**
+     * @brief Returns review description
+     * @return Review description
+     */
+    std::string const &get_review_description() const;
 
-    std::string const &get_review_author() const { return review_author_; }
+    /**
+     * @brief Retursn review author
+     * @return Review author
+     */
+    std::string const &get_review_author() const;
 
   private:
     /// @brief Review score

@@ -14,7 +14,7 @@ enum class PIECE_UNIT {
 
 /**
  * @brief Converts unit to string
- * @return std::string String describing the unit
+ * @return String describing the unit
  */
 std::string to_string(PIECE_UNIT unit);
 
@@ -28,18 +28,18 @@ class Pieces : public IQuantity {
      * @param value Value
      * @param unit Unit
      */
-    Pieces(unsigned long long value, PIECE_UNIT unit) : value_(value), unit_(unit) {}
+    Pieces(unsigned long long value, PIECE_UNIT unit);
 
     /**
      * @brief Scales quantity
      * @param portions Portions
      */
-    void scale_quantity(double portions) override { value_ *= portions; }
+    void scale_quantity(double portions) override;
 
     /**
      * @brief Displays quantity
      */
-    void display() const override { std::cout << value_ << to_string(unit_); }
+    void display() const override;
 
   private:
     /// @brief Value

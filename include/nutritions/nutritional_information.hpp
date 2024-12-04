@@ -20,50 +20,38 @@ class NutritionalInformation {
      * @param fat
      */
     NutritionalInformation(Calories calories = Calories(0.0), Protein protein = Protein(0.0),
-                           Carbohydrates carbohydrates = Carbohydrates(0.0), Fat fat = Fat(0.0))
-        : calories_(calories), protein_(protein), carbohydrates_(carbohydrates), fat_(fat) {}
+                           Carbohydrates carbohydrates = Carbohydrates(0.0), Fat fat = Fat(0.0));
 
     // Overload + operator
-    NutritionalInformation operator+(const NutritionalInformation &other) const {
-        NutritionalInformation result(calories_ + other.calories_, protein_ + other.protein_,
-                                      carbohydrates_ + other.carbohydrates_, fat_ + other.fat_);
-        return result;
-    }
-
+    NutritionalInformation operator+(const NutritionalInformation &other) const;
     /**
      * @brief Returns calories
      * @return Calories
      */
-    Calories get_calories() const { return calories_; }
+    Calories get_calories() const;
 
     /**
      * @brief Returns protein
      * @return Protein
      */
-    Protein get_protein() const { return protein_; }
+    Protein get_protein() const;
 
     /**
      * @brief Returns carbohydrates
      * @return Carbohydrates
      */
-    Carbohydrates get_carbohydrates() const { return carbohydrates_; }
+    Carbohydrates get_carbohydrates() const;
 
     /**
      * @brief Returns fat
      * @return Fat
      */
-    Fat get_fat() const { return fat_; }
+    Fat get_fat() const;
 
     /**
      * @brief Displays nutrition information
      */
-    void display() const {
-        std::cout << "Nutritional Information:\n"
-                  << " - Calories: " << calories_.get_value() << " kcal\n"
-                  << " - Protein: " << protein_.get_value() << " g\n"
-                  << " - Carbohydrates: " << carbohydrates_.get_value() << " g\n"
-                  << " - Fat: " << fat_.get_value() << " g\n";
-    }
+    void display() const;
 
   private:
     /// @brief Calories

@@ -14,6 +14,12 @@ std::string to_string(const ENERGY_UNIT unit) {
     }
 }
 
+Energy::Energy(double value, ENERGY_UNIT unit) : value_(value), unit_(unit) {}
+
+void Energy::scale_quantity(double portions) { value_ *= portions; }
+
+void Energy::display() const { std::cout << value_ << to_string(unit_); }
+
 Energy operator"" _kcal(const long double value) {
     return Energy{static_cast<double>(value), ENERGY_UNIT::KILOCALORIE};
 }

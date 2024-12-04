@@ -14,7 +14,7 @@ enum class VOLUME_UNIT {
 
 /**
  * @brief Converts unit to string
- * @return std::string String describing the unit
+ * @return String describing the unit
  */
 std::string to_string(VOLUME_UNIT unit);
 
@@ -28,18 +28,18 @@ class Volume : public IQuantity {
      * @param value Value
      * @param unit Unit
      */
-    Volume(double value, VOLUME_UNIT unit) : value_(value), unit_(unit) {}
+    Volume(double value, VOLUME_UNIT unit);
 
     /**
      * @brief Scales quantity
      * @param portions Portions
      */
-    void scale_quantity(double portions) override { value_ *= portions; }
+    void scale_quantity(double portions) override;
 
     /**
      * @brief Displays quantity
      */
-    void display() const override { std::cout << value_ << to_string(unit_); }
+    void display() const override;
 
   private:
     /// @brief Value

@@ -2,6 +2,9 @@
 
 #include "ingredients/base_ingredient.hpp"
 
+/**
+ * @brief Water
+ */
 class Water : public BaseIngredient {
   public:
     Water(const Volume &volume)
@@ -10,6 +13,9 @@ class Water : public BaseIngredient {
               NutritionalInformation{Calories{0.0}, Protein{0.0}, Carbohydrates{0.0}, Fat{0.0}}) {}
 };
 
+/**
+ * @brief Salt
+ */
 class Salt : public BaseIngredient {
   public:
     Salt(const Weight &weight)
@@ -18,6 +24,9 @@ class Salt : public BaseIngredient {
               NutritionalInformation{Calories{0.0}, Protein{0.0}, Carbohydrates{0.0}, Fat{0.0}}) {}
 };
 
+/**
+ * @brief WheatFlourType550
+ */
 class WheatFlourType550 : public BaseIngredient {
   public:
     WheatFlourType550(const Weight &weight)
@@ -26,6 +35,9 @@ class WheatFlourType550 : public BaseIngredient {
                                                 Fat{1.1}}) {}
 };
 
+/**
+ * @brief WheatFourType00
+ */
 class WheatFlourType00 : public BaseIngredient {
   public:
     WheatFlourType00(const Weight &weight)
@@ -34,6 +46,9 @@ class WheatFlourType00 : public BaseIngredient {
                                                 Fat{1.0}}) {}
 };
 
+/**
+ * @brief Yeast
+ */
 class Yeast : public BaseIngredient {
   public:
     Yeast(const Weight &weight)
@@ -42,6 +57,9 @@ class Yeast : public BaseIngredient {
                                                 Fat{1.2}}) {}
 };
 
+/**
+ * @brief Apple
+ */
 class Apple : public BaseIngredient {
   public:
     Apple(const Pieces &pieces)
@@ -55,6 +73,9 @@ class Apple : public BaseIngredient {
               NutritionalInformation{Calories{54}, Protein{0.3}, Carbohydrates{14.4}, Fat{0.1}}) {}
 };
 
+/**
+ * @brief Banana
+ */
 class Banana : public BaseIngredient {
   public:
     Banana(const Pieces &pieces)
