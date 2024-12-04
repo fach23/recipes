@@ -1,5 +1,7 @@
 #include "nutritions/nutritional_information.hpp"
 
+namespace recipes {
+
 NutritionalInformation::NutritionalInformation(Calories calories, Protein protein,
                                                Carbohydrates carbohydrates, Fat fat)
     : calories_(calories), protein_(protein), carbohydrates_(carbohydrates), fat_(fat) {}
@@ -26,3 +28,5 @@ void NutritionalInformation::display() const {
               << " - Carbohydrates: " << carbohydrates_.get_value() << " g\n"
               << " - Fat: " << fat_.get_value() << " g\n";
 }
+
+} // namespace recipes

@@ -2,6 +2,8 @@
 
 #include "base_nutrition.hpp"
 
+namespace recipes {
+
 /**
  * @brief Strong type for calories
  */
@@ -13,3 +15,5 @@ class Calories : public BaseNutrition {
      */
     explicit Calories(double value) : BaseNutrition(value) {}
 };
+
+} // namespace recipes

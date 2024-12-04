@@ -5,6 +5,8 @@
 
 #include "recipes/base_recipe.hpp"
 
+namespace recipes {
+
 /**
  * @brief Manager for recipes
  */
@@ -41,3 +43,5 @@ class RecipeManager {
     /// @brief recipes
     std::vector<BaseRecipe> recipes_;
 };
+
+} // namespace recipes

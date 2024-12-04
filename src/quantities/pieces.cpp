@@ -1,5 +1,7 @@
 #include "../include/quantities/pieces.hpp"
 
+namespace recipes {
+
 std::string to_string(const PIECE_UNIT unit) {
     switch (unit) {
     case PIECE_UNIT::PIECE: {
@@ -23,3 +25,5 @@ void Pieces::display() const { std::cout << value_ << to_string(unit_); }
 Pieces operator"" _piece(const unsigned long long value) {
     return Pieces{value, PIECE_UNIT::PIECE};
 }
+
+} // namespace recipes

@@ -7,6 +7,8 @@
 #include "fat.hpp"
 #include "protein.hpp"
 
+namespace recipes {
+
 /**
  * @brief Nutritional information per 100 gr
  */
@@ -63,3 +65,5 @@ class NutritionalInformation {
     /// @brief Fat
     Fat fat_;
 };
+
+} // namespace recipes

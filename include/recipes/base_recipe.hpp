@@ -9,6 +9,8 @@
 #include "reviews/review.hpp"
 #include "reviews/review_manager.hpp"
 
+namespace recipes {
+
 /// @brief Enum describing the category
 enum class CATEGORY { SOUP, DESSERT };
 
@@ -100,3 +102,5 @@ class BaseRecipe {
     /// @brief Health score
     double health_score_;
 };
+
+} // namespace recipes

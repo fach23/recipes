@@ -6,6 +6,8 @@
 
 #include "i_quantity.hpp"
 
+namespace recipes {
+
 /// @brief Enum describing the weight unit
 enum class WEIGHT_UNIT {
     GRAM, // DEFAULT
@@ -53,3 +55,5 @@ Weight operator"" _g(long double value);
 
 /// @brief Literal operator for representing weight values in kilograms
 Weight operator"" _kg(long double value);
+
+} // namespace recipes

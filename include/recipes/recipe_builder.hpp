@@ -8,6 +8,8 @@
 #include "recipes/base_recipe.hpp"
 #include "reviews/review.hpp"
 
+namespace recipes {
+
 /**
  * @brief Class for building recipes
  */
@@ -67,3 +69,5 @@ class RecipeBuilder {
     /// @brief Reviews
     std::vector<Review> reviews_;
 };
+
+} // namespace recipes

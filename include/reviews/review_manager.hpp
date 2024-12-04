@@ -1,6 +1,7 @@
 #pragma once
 
 #include "reviews/review.hpp"
+namespace recipes {
 
 /**
  * @brief Review manager‚
@@ -34,3 +35,5 @@ class ReviewManager {
     /// @brief Reviews
     std::vector<Review> reviews_;
 };
+
+} // namespace recipes

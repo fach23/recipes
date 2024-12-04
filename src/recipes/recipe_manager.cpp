@@ -1,5 +1,7 @@
 #include "recipes/recipe_manager.hpp"
 
+namespace recipes {
+
 void RecipeManager::add_recipe(const BaseRecipe &recipe) { recipes_.push_back(recipe); }
 
 const BaseRecipe &RecipeManager::get_recipe_by_name(const std::string &name) const {
@@ -24,3 +26,5 @@ void RecipeManager::get_recipe_names() const {
         std::cout << recpie.get_name() << std::endl;
     }
 }
+
+} // namespace recipes

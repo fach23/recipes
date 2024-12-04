@@ -6,6 +6,8 @@
 
 #include "i_quantity.hpp"
 
+namespace recipes {
+
 /// @brief Enum describing the volume unit
 enum class VOLUME_UNIT {
     MILLILITER, // DEFAULT
@@ -53,3 +55,5 @@ Volume operator"" _ml(long double value);
 
 /// @brief Literal operator for representing volume values in liters
 Volume operator"" _l(long double value);
+
+} // namespace recipes

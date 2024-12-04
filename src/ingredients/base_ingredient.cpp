@@ -1,6 +1,8 @@
 
 #include "ingredients/base_ingredient.hpp"
 
+namespace recipes {
+
 BaseIngredient::BaseIngredient(std::string name, const QuantityPtr &quantity,
                                const NutritionalInformation &nutritional_information)
     : name_(std::move(name)), quantity_(quantity),
@@ -21,3 +23,5 @@ void BaseIngredient::display() const {
     quantity_->display();
     // nutritional_information_.display();
 }
+
+} // namespace recipes

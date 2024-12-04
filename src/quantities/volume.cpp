@@ -1,5 +1,7 @@
 #include "../include/quantities/volume.hpp"
 
+namespace recipes {
+
 std::string to_string(const VOLUME_UNIT unit) {
     switch (unit) {
     case VOLUME_UNIT::MILLILITER: {
@@ -27,3 +29,5 @@ Volume operator"" _ml(const long double value) {
 Volume operator"" _l(const long double value) {
     return Volume{static_cast<double>(value), VOLUME_UNIT::LITER};
 }
+
+} // namespace recipes

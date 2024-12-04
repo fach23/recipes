@@ -7,6 +7,8 @@
 #include "nutritions/nutritional_information.hpp"
 #include "quantities/quantities.hpp"
 
+namespace recipes {
+
 /**
  * @brief Base class for ingredient
  */
@@ -56,3 +58,5 @@ class BaseIngredient {
     /// @brief Nutritional information
     NutritionalInformation nutritional_information_;
 };
+
+} // namespace recipes

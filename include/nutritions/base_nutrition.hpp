@@ -1,5 +1,7 @@
 #pragma once
 
+namespace recipes {
+
 /**
  * @brief Base class for nutrition
  */
@@ -33,3 +35,5 @@ class BaseNutrition {
     /// @brief Value
     double value_;
 };
+
+} // namespace recipes

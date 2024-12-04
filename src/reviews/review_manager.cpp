@@ -1,5 +1,7 @@
 #include "reviews/review_manager.hpp"
 
+namespace recipes {
+
 ReviewManager::ReviewManager(const std::vector<Review> &reviews) : reviews_(reviews) {}
 
 void ReviewManager::add_review(const Review &review) { reviews_.push_back(review); }
@@ -15,3 +17,5 @@ std::optional<REVIEW_SCORE> ReviewManager::get_mean_review_score() const {
         return static_cast<REVIEW_SCORE>(accumulated_review_score / reviews_.size());
     }
 }
+
+} // namespace recipes

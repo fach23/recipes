@@ -2,6 +2,8 @@
 
 #include "ingredients/base_ingredient.hpp"
 
+namespace recipes {
+
 /**
  * @brief Water
  */
@@ -88,3 +90,5 @@ class Banana : public BaseIngredient {
               "Banana", std::make_shared<Weight>(weight),
               NutritionalInformation{Calories{96}, Protein{1.0}, Carbohydrates{22.0}, Fat{0.2}}) {}
 };
+
+} // namespace recipes

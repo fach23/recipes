@@ -1,5 +1,7 @@
 #include "../include/quantities/spoon.hpp"
 
+namespace recipes {
+
 std::string to_string(const SPOON_UNIT unit) {
     switch (unit) {
     case SPOON_UNIT::TEA_SPOON: {
@@ -27,3 +29,5 @@ Spoons operator"" _tea_spoon(const unsigned long long value) {
 Spoons operator"" _table_spoon(const unsigned long long value) {
     return Spoons{value, SPOON_UNIT::TABLE_SPOON};
 }
+
+} // namespace recipes

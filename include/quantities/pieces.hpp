@@ -6,6 +6,8 @@
 
 #include "i_quantity.hpp"
 
+namespace recipes {
+
 /// @brief Enum describing the piece unit
 enum class PIECE_UNIT {
     PIECE, // DEFAULT
@@ -50,3 +52,5 @@ class Pieces : public IQuantity {
 
 /// @brief Literal operator for representing piece values in pieces
 Pieces operator"" _piece(unsigned long long value);
+
+} // namespace recipes

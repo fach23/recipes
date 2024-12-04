@@ -2,6 +2,8 @@
 
 #include "base_nutrition.hpp"
 
+namespace recipes {
+
 /**
  * @brief Strong type for fat
  */
@@ -13,3 +15,5 @@ class Fat : public BaseNutrition {
      */
     explicit Fat(double value) : BaseNutrition(value) {}
 };
+
+} // namespace recipes

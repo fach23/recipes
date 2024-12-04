@@ -4,6 +4,8 @@
 #include <memory>
 #include <string>
 
+namespace recipes {
+
 class IQuantity;
 /// @brief Pointer to quantity
 using QuantityPtr = std::shared_ptr<IQuantity>;
@@ -29,3 +31,5 @@ class IQuantity {
      */
     virtual ~IQuantity() = default;
 };
+
+} // namespace recipes

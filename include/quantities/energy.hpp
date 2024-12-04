@@ -6,6 +6,8 @@
 
 #include "i_quantity.hpp"
 
+namespace recipes {
+
 /// @brief Enum describing the energy unit
 enum class ENERGY_UNIT {
     KILOCALORIE, // DEFAULT
@@ -53,3 +55,5 @@ Energy operator"" _kcal(long double value);
 
 /// @brief Literal operator for representing energy values in kilojoules‚‚
 Energy operator"" _kj(long double value);
+
+} // namespace recipes

@@ -2,6 +2,8 @@
 #include "recipes/recipe_builder.hpp"
 #include "recipes/recipe_manager.hpp"
 
+using namespace recipes;
+
 int main() {
     // use the generic RecipeBuilder to create a PizzaDoughRecipe
     BaseRecipe pizza_dough_recipe =

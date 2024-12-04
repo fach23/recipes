@@ -6,6 +6,8 @@
 
 #include "i_quantity.hpp"
 
+namespace recipes {
+
 /// @brief Enum describing the spoon unit
 enum class SPOON_UNIT {
     TEA_SPOON, // DEFAULT
@@ -53,3 +55,5 @@ Spoons operator"" _tea_spoon(unsigned long long value);
 
 /// @brief Literal operator for representing spoon values in table spoons
 Spoons operator"" _table_spoon(unsigned long long value);
+
+} // namespace recipes

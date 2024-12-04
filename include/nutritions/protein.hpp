@@ -2,6 +2,8 @@
 
 #include "base_nutrition.hpp"
 
+namespace recipes {
+
 /**
  * @brief Strong type for protein
  */
@@ -13,3 +15,5 @@ class Protein : public BaseNutrition {
      */
     explicit Protein(double value) : BaseNutrition(value) {}
 };
+
+} // namespace recipes

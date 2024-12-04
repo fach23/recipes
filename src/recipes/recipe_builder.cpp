@@ -1,5 +1,7 @@
 #include "recipes/recipe_builder.hpp"
 
+namespace recipes {
+
 RecipeBuilder::RecipeBuilder(const std::string name) : name_(std::move(name)) {}
 
 RecipeBuilder &RecipeBuilder::set_description(const std::string description) {
@@ -30,3 +32,5 @@ RecipeBuilder &RecipeBuilder::add_review(const Review &review) {
 BaseRecipe RecipeBuilder::build() const {
     return {name_, description_, ingredients_, portion_quantity_, author_, reviews_};
 }
+
+} // namespace recipes

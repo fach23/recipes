@@ -4,6 +4,8 @@
 #include <optional>
 #include <vector>
 
+namespace recipes {
+
 /**
  * @brief Review score
  */
@@ -56,3 +58,5 @@ class Review {
     /// @brief Review author
     std::string review_author_;
 };
+
+} // namespace recipes
