@@ -4,7 +4,7 @@
  * @brief Base class for nutrition
  */
 class BaseNutrition {
-public:
+  public:
     /**
      * @brief Constructor
      */
@@ -19,8 +19,7 @@ public:
     /**
      * @brief Operator for adding nutritions
      */
-    template <typename T>
-    T operator+(const T &other) const {
+    template <typename T> T operator+(const T &other) const {
         T result(value_ + other.get_value());
         return result;
     }
@@ -30,7 +29,7 @@ public:
      */
     virtual ~BaseNutrition() {}
 
-protected:
+  protected:
     /// @brief Value
     double value_;
 };

@@ -1,8 +1,8 @@
 #pragma once
 
 #include <iostream>
-#include <string>
 #include <memory>
+#include <string>
 
 #include "i_quantity.hpp"
 
@@ -22,31 +22,26 @@ std::string to_string(VOLUME_UNIT unit);
  * @brief Volume class‚
  */
 class Volume : public IQuantity {
-public:
+  public:
     /**
      * @brief Constructor
      * @param value Value
      * @param unit Unit
      */
-    Volume(double value, VOLUME_UNIT unit)
-            : value_(value), unit_(unit) {}
+    Volume(double value, VOLUME_UNIT unit) : value_(value), unit_(unit) {}
 
     /**
      * @brief Scales quantity
      * @param portions Portions
      */
-    void scale_quantity(double portions) override {
-        value_ *= portions;
-    }
+    void scale_quantity(double portions) override { value_ *= portions; }
 
     /**
      * @brief Displays quantity
      */
-    void display() const override {
-        std::cout << value_ << to_string(unit_);
-    }
+    void display() const override { std::cout << value_ << to_string(unit_); }
 
-private:
+  private:
     /// @brief Value
     double value_;
     /// @brief Unit
@@ -54,7 +49,7 @@ private:
 };
 
 /// @brief Literal operator for representing volume values in mililiters
-Volume operator "" _ml(long double value);
+Volume operator"" _ml(long double value);
 
 /// @brief Literal operator for representing volume values in liters
-Volume operator "" _l(long double value);
+Volume operator"" _l(long double value);

@@ -6,7 +6,7 @@
  * @brief Strong type for protein
  */
 class Protein : public BaseNutrition {
-public:
+  public:
     /**
      * @brief Constructor
      * @param value Value

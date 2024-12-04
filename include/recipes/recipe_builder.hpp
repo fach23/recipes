@@ -1,16 +1,16 @@
 #pragma once
 
 #include <iostream>
-#include <vector>
-#include <string>
 #include <optional>
+#include <string>
+#include <vector>
 
 #include "recipes/base_recipe.hpp"
 #include "reviews/review.hpp"
 
 // RecipeBuilder class for building recipes
 class RecipeBuilder {
-public:
+  public:
     RecipeBuilder(std::string name) : name_(std::move(name)) {}
 
     RecipeBuilder &set_description(std::string description) {
@@ -28,12 +28,10 @@ public:
         return *this;
     }
 
-
     RecipeBuilder &set_author(std::string author) {
         author_ = std::move(author);
         return *this;
     }
-
 
     RecipeBuilder &add_review(const Review &review) {
         reviews_.push_back(review);
@@ -44,11 +42,11 @@ public:
         return {name_, description_, ingredients_, portion_quantity_, author_, reviews_};
     }
 
-private:
+  private:
     std::string name_;
     std::string description_;
-    std::vector <BaseIngredient> ingredients_;
+    std::vector<BaseIngredient> ingredients_;
     double portion_quantity_;
     std::string author_;
-    std::vector <Review> reviews_;
+    std::vector<Review> reviews_;
 };

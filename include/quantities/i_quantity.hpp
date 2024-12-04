@@ -1,8 +1,8 @@
 #pragma once
 
 #include <iostream>
-#include <string>
 #include <memory>
+#include <string>
 
 class IQuantity;
 /// @brief Pointer to quantity
@@ -12,7 +12,7 @@ using QuantityPtr = std::shared_ptr<IQuantity>;
  * @brief Virtual base class for quantity
  */
 class IQuantity {
-public:
+  public:
     /**
      * @brief Scales quantity
      * @param portions Portions

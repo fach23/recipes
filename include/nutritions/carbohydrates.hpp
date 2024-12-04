@@ -6,7 +6,7 @@
  * @brief Strong type for carbohydrates
  */
 class Carbohydrates : public BaseNutrition {
-public:
+  public:
     /**
      * @brief Constructor
      * @param value Value

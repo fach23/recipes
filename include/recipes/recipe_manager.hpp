@@ -1,7 +1,7 @@
 #pragma once
 
-#include <vector>
 #include <algorithm>
+#include <vector>
 
 #include "recipes/base_recipe.hpp"
 
@@ -9,12 +9,10 @@
  * @brief Manager for recipes
  */
 class RecipeManager {
-public:
+  public:
     RecipeManager() = default;
 
-    void add_recipe(const BaseRecipe &recipe) {
-        recipes_.push_back(recipe);
-    }
+    void add_recipe(const BaseRecipe &recipe) { recipes_.push_back(recipe); }
 
     const BaseRecipe &get_recipe_by_name(const std::string &name) const {
         auto it = std::find_if(std::begin(recipes_), std::end(recipes_),
@@ -35,13 +33,12 @@ public:
     }
 
     void get_recipe_names() const {
-        for (const auto &recpie: recipes_) {
+        for (const auto &recpie : recipes_) {
             std::cout << recpie.get_name() << std::endl;
         }
     }
 
-private:
+  private:
     /// @brief recipes
     std::vector<BaseRecipe> recipes_;
 };
-

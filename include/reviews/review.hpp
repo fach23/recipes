@@ -1,8 +1,8 @@
 #pragma once
 
 #include <iostream>
-#include <vector>
 #include <optional>
+#include <vector>
 
 enum class REVIEW_SCORE {
     NO_STAR = 0,
@@ -14,10 +14,11 @@ enum class REVIEW_SCORE {
 };
 
 class Review {
-public:
-    Review(REVIEW_SCORE review_score, std::string review_description = "", std::string review_author = "")
-            : review_score_(review_score), review_description_(std::move(review_description)),
-              review_author_(review_author) {}
+  public:
+    Review(REVIEW_SCORE review_score, std::string review_description = "",
+           std::string review_author = "")
+        : review_score_(review_score), review_description_(std::move(review_description)),
+          review_author_(review_author) {}
 
     REVIEW_SCORE get_review_score() const { return review_score_; }
 
@@ -25,8 +26,11 @@ public:
 
     std::string const &get_review_author() const { return review_author_; }
 
-private:
+  private:
+    /// @brief Review score
     REVIEW_SCORE review_score_;
+    /// @brief Review description
     std::string review_description_;
+    /// @brief Review author
     std::string review_author_;
 };

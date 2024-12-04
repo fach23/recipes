@@ -1,8 +1,8 @@
 #pragma once
 
 #include <iostream>
-#include <string>
 #include <memory>
+#include <string>
 
 #include "i_quantity.hpp"
 
@@ -22,31 +22,26 @@ std::string to_string(PIECE_UNIT unit);
  * @brief Pieces class
  */
 class Pieces : public IQuantity {
-public:
+  public:
     /**
      * @brief Constructor
      * @param value Value
      * @param unit Unit
      */
-    Pieces(unsigned long long value, PIECE_UNIT unit)
-            : value_(value), unit_(unit) {}
+    Pieces(unsigned long long value, PIECE_UNIT unit) : value_(value), unit_(unit) {}
 
     /**
      * @brief Scales quantity
      * @param portions Portions
      */
-    void scale_quantity(double portions) override {
-        value_ *= portions;
-    }
+    void scale_quantity(double portions) override { value_ *= portions; }
 
     /**
      * @brief Displays quantity
      */
-    void display() const override {
-        std::cout << value_ << to_string(unit_);
-    }
+    void display() const override { std::cout << value_ << to_string(unit_); }
 
-private:
+  private:
     /// @brief Value
     unsigned long long value_;
     /// @brief Unit
@@ -54,4 +49,4 @@ private:
 };
 
 /// @brief Literal operator for representing piece values in pieces
-Pieces operator "" _piece(unsigned long long value);
+Pieces operator"" _piece(unsigned long long value);

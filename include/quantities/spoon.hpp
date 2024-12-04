@@ -1,8 +1,8 @@
 #pragma once
 
 #include <iostream>
-#include <string>
 #include <memory>
+#include <string>
 
 #include "i_quantity.hpp"
 
@@ -22,31 +22,26 @@ std::string to_string(SPOON_UNIT unit);
  * @brief Spoons class‚‚
  */
 class Spoons : public IQuantity {
-public:
+  public:
     /**
      * @brief Constructor
      * @param value Value
      * @param unit Unit
      */
-    Spoons(unsigned long long value, SPOON_UNIT unit)
-            : value_(value), unit_(unit) {}
+    Spoons(unsigned long long value, SPOON_UNIT unit) : value_(value), unit_(unit) {}
 
     /**
      * @brief Scales quantity
      * @param portions Portions
      */
-    void scale_quantity(double portions) override {
-        value_ *= portions;
-    }
+    void scale_quantity(double portions) override { value_ *= portions; }
 
     /**
      * @brief Displays quantity
      */
-    void display() const override {
-        std::cout << value_ << to_string(unit_);
-    }
+    void display() const override { std::cout << value_ << to_string(unit_); }
 
-private:
+  private:
     /// @brief Value
     unsigned long long value_;
     /// @brief Unit
@@ -54,7 +49,7 @@ private:
 };
 
 /// @brief Literal operator for representing spoon values in tea spoons
-Spoons operator "" _tea_spoon(unsigned long long value);
+Spoons operator"" _tea_spoon(unsigned long long value);
 
 /// @brief Literal operator for representing spoon values in table spoons
-Spoons operator "" _table_spoon(unsigned long long value);
+Spoons operator"" _table_spoon(unsigned long long value);

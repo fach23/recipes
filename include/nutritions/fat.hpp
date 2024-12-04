@@ -6,7 +6,7 @@
  * @brief Strong type for fat
  */
 class Fat : public BaseNutrition {
-public:
+  public:
     /**
      * @brief Constructor
      * @param value Value

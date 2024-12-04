@@ -6,7 +6,7 @@
  * @brief Strong type for calories
  */
 class Calories : public BaseNutrition {
-public:
+  public:
     /**
      * @brief Constructor
      * @param value Value

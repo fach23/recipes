@@ -1,9 +1,11 @@
-#include "recipes/recipe_manager.hpp"
+#include "ingredients/ingredients.hpp"
 #include "recipes/recipe_builder.hpp"
+#include "recipes/recipe_manager.hpp"
 
 int main() {
     // use the generic RecipeBuilder to create a PizzaDoughRecipe
-    BaseRecipe pizza_dough_recipe = RecipeBuilder("PizzaDough")
+    BaseRecipe pizza_dough_recipe =
+        RecipeBuilder("PizzaDough")
             .set_description("This is a recipe for homemade pizza dough.")
             .add_ingredient(WheatFlourType00(155.0_g))
             .add_ingredient(Water(100.0_ml))
@@ -18,7 +20,8 @@ int main() {
     pizza_dough_recipe.display();
 
     // use the generic RecipeBuilder to create a DattelSouce
-    BaseRecipe dattel_sauce_recipe = RecipeBuilder("DattelSauce")
+    BaseRecipe dattel_sauce_recipe =
+        RecipeBuilder("DattelSauce")
             .set_description("This is a recipe for homemade dattel sauce.")
             .add_ingredient(Salt(4.6_g))
             .set_portion_quantity(1.0)
